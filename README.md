@@ -16,10 +16,10 @@ Then the script proceeds to check each value in the password list encoding it as
 
 If a match is found the password is printed to the console with the amount of attempts, because I like to see how many attempts were tried and how fast the script runs through attempts.
 
-There is an outer try catch because for another password list I was using I would get this error:
+The lower try catch is because for another password list I was using I would get this error:
 
         UnicodeDecodeError: 'utf-8' codec can't decode byte 0xf1 in position 923: invalid continuation byte
 
-I couldnt find a fix for this and the amount of attempts it would stop at was 60137 even though there was alot more passwords in the list, i tried reading the txt file as bytes and decoding the bytes before i encoded it as utf-8, tried using the chardet library to find the file encoding which was a fail, as it told me it was ascii encoded, but changing the pass list seemed to work fine and print no password found when the file was ran through.
+I couldnt find a fix for this and the amount of attempts it would stop at was 60137, even though there was alot more passwords in the list, i tried reading the txt file as bytes and decoding the bytes before i encoded it as utf-8, tried using the chardet library to find the file encoding which was a fail, as it told me it was ascii encoded, but changing the pass list seemed to work fine and print no password found when the file was ran through.
     
 
